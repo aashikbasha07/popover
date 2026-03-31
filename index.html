@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 4 Popover Example</title>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container text-center mt-5">
+    <h2>Bootstrap 4 Popover Demo</h2>
+    <p>Click the buttons below to see popovers:</p>
+
+    <!-- Basic popover -->
+    <button type="button" class="btn btn-primary m-2"
+            data-toggle="popover" title="Popover Header"
+            data-content="This is some example content inside the popover.">
+      Basic Popover
+    </button>
+
+    <!-- Popover on top -->
+    <button type="button" class="btn btn-success m-2"
+            data-toggle="popover" data-placement="top"
+            title="Top Popover"
+            data-content="Popover shown on top of the button.">
+      Top Popover
+    </button>
+
+    <!-- Popover on bottom -->
+    <button type="button" class="btn btn-info m-2"
+            data-toggle="popover" data-placement="bottom"
+            title="Bottom Popover"
+            data-content="This popover appears below the button.">
+      Bottom Popover
+    </button>
+
+    <!-- Popover that closes when clicking outside -->
+    <button type="button" class="btn btn-warning m-2"
+            data-toggle="popover" data-trigger="focus"
+            title="Dismiss on Outside Click"
+            data-content="This popover will close when clicking outside.">
+      Click to Dismiss
+    </button>
+
+    <!-- Popover on hover -->
+    <button type="button" class="btn btn-secondary m-2"
+            data-toggle="popover" data-trigger="hover"
+            title="Hover Popover"
+            data-content="Popover triggered on hover.">
+      Hover Popover
+    </button>
+  </div>
+
+  <!-- Required JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+  <!-- Initialize All Popovers -->
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    });
+  </script>
+
+</body>
+</html>
